@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+        }
+        /* form ke andar flex krege */
+        form{
+            display: flex;
+            flex-direction: column;
+            height: 70vh;
+            width: 40vw;
+            background-color: white;
+            align-items: center;
+            justify-content: space-between;
+            border-radius:5px;
+        }
+
+        form > h1{
+          border-bottom: 1px solid black;
+          width: 20vw;
+          text-align: center;
+          font-family: Arial, Helvetica, sans-serif;
+          padding-bottom: 10px;
+          font-size: 20px;
+        }
+
+        form > input{
+            outline: none;
+            width: 20vw;
+            font-family: Arial, Helvetica, sans-serif;
+            border: none;
+            border-bottom: 1px solid black;
+        }
+
+        #btn{
+        width: 20vw;
+        height: 5vh;
+        border: none;
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        transition: all 0.5s;
+        background-color: cornflowerblue;
+        margin-bottom: 20px;
+        color: white;
+        }
+
+        #btn:hover{
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/api/register" method="post">
+        <h1>Register Page</h1>
+        <input type="text" placeholder="Enter your name" name="name" id="name">
+        <input type="email" placeholder="Enter your email" name="email" id="email">
+        <input type="password" placeholder="Enter your password" name="password" id="password">
+        <input type="submit" value="Register" id="btn">
+
+    </form>
+</body>
+</html>
